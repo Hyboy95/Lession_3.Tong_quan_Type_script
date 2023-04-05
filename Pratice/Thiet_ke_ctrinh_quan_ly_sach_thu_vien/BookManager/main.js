@@ -1,0 +1,18 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var Book_1 = require("./Book");
+var BookManager_1 = require("./BookManager");
+var book1 = new Book_1.Book('1', 'name_1');
+var book2 = new Book_1.Book('2', 'name_2');
+var book3 = new Book_1.Book('3', 'name_3');
+var book4 = new Book_1.Book('4', 'name_4');
+var bookManager = new BookManager_1.BookManager;
+bookManager.add(book1);
+bookManager.add(book2);
+bookManager.add(book3);
+bookManager.add(book4);
+console.log(bookManager.getList());
+bookManager.update('4', 'Hieu Truong');
+console.log(bookManager.getList());
+bookManager.delete('4');
+console.log(bookManager.getList());
